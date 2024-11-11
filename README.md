@@ -1,2 +1,2 @@
-# Discord-TRPG Log Shader-to-RplGenStudio
+# Discord-TRPG Log Shader
  Basically for self-use
