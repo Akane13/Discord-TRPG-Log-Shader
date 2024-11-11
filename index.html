@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRPG Log着色器-Discord</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TRPG Log着色器-Discord</h1>
+    
+    <label for="fileInput">上传日志文件:</label>
+    <input type="file" id="fileInput" accept=".txt" title="请选择一个日志文件" placeholder="请选择一个.txt文件">
+
+    
+    <div class="options">
+      <label><input type="checkbox" id="removeDate"> 删除年月日</label>
+      <label><input type="checkbox" id="removeTime"> 删除时间</label>
+      <label><input type="checkbox" id="removeRP"> 删除戏外记录</label>
+      <label><input type="checkbox" id="addBrackets"> 添加&lt;&gt;在昵称两边</label>
+      <label><input type="checkbox" id="removeColon"> 删除冒号</label>
+      <label><input type="checkbox" id="filterDice"> 骰子指令过滤</label>
+      <label><input type="checkbox" id="deleteEnter"> 删除换行符</label>
+    </div>
+    
+    <div class="container-lr">
+      <div class="characters">
+        <h2>角色名称设置</h2>
+        <div id="characterList"></div>
+        <button id="identifyRoles">识别角色</button>
+      </div>
+      
+      <div class="roles">
+        <h2>角色设置</h2>
+        <div class="role" data-role="KP">
+          <label>KP颜色: <input type="color" value="#FF0000"></label>
+        </div>
+        <div class="role" data-role="PL">
+          <label>PL颜色: <input type="color" value="#00FF00"></label>
+        </div>
+        <div class="role" data-role="机器人">
+          <label>机器人颜色: <input type="color" value="#0000FF"></label>
+        </div>
+      </div>
+    </div>
+
+    <button id="processLog">处理日志</button>
+    
+    <div id="outputContainer">
+      <h2>预览</h2>
+      <div id="output"></div>
+    </div>
+    
+    <button id="downloadLog">下载处理后的日志</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
