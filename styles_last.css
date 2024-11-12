@@ -1,0 +1,112 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #282c34; 
+    color: #fff;
+}
+
+h1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container { 
+    width: 80%; 
+    margin: auto; 
+    padding: 20px; 
+    display: flex;
+    height: 100vh;
+}
+
+input[type="file"], button, input[type="checkbox"] + label {
+    margin: 10px;
+}
+
+#log-preview {
+    width: 80%;
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    max-height: 500px;
+}
+
+#logContent {
+    white-space: pre-wrap;
+    color: #ccc;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.left-side {
+    flex: 1; /* 左侧部分占据一半的空间 */
+}
+
+.right-side {
+    flex: 1; /* 左侧部分占据一半的空间 */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#oocSymbols {
+    margin-left: 20px;
+    display: none;
+}
+
+#removeOOC:checked + #oocSymbols {
+    display: block;
+}
+
+.role-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.role-item input[type="text"] {
+    flex: 1;
+    padding: 4px;
+    margin-right: 8px;
+}
+
+.role-item button {
+    padding: 4px 8px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.output {
+    display: flex; /* 启用Flexbox布局 */
+    flex-wrap: wrap; /* 允许元素换行 */
+    gap: 10px; /* 设置元素之间的间隔 */
+}
+
+.output-item {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #ccc;
+}

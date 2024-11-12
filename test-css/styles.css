@@ -6,17 +6,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #121212;
+    color: #fff;
   }
   
   .container {
-    background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 500px;
+    width: 80%;
     max-width: 90%;
     overflow: auto;
+    margin: auto;
   }
   
   h1, h2 {
@@ -67,24 +68,15 @@ body {
     background: #0056b3;
   }
   
-  /* Parent container with flex layout */
-.container-lr {
-  display: flex;
-  justify-content: space-between;  /* Distribute space between characters and roles */
-  align-items: flex-start;  /* Align items to the top of the container */
-  width: 100%;  /* Full width */
-}
 
-/* Optional: Add margin between character and role section */
-.characters {
-  margin-right: 20px;  /* Adjust space between characters and roles */
-}
+.file-input { margin-bottom: 20px; }
 
-.roles {
-  margin-left: 20px;  /* Adjust space between characters and roles */
-}
+.character-settings { margin-top: 20px; }
 
-/* Optional: Adjust layout of role items */
-.role {
-  margin-bottom: 10px;  /* Space between role items */
-}
+.character { display: flex; align-items: center; margin-bottom: 10px; }
+
+.character input[type="color"] { margin-left: 10px; }
+
+.log-preview { margin-top: 20px; max-height: 300px; overflow-y: scroll; background: #1e1e1e; padding: 10px; border-radius: 5px; }
+
+.log-preview pre { margin: 0; }

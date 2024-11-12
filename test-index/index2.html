@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跑团日志着色器</title>
+<link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+<div class="container">
+  <h1>跑团日志着色器</h1>
+  <div class="file-input">
+    <label for="fileInput">上传日志文件:</label>
+    <input type="file" id="fileInput" accept=".txt" title="请选择一个日志文件">
+  </div>
+  <button id="analyzeButton">识别角色</button>
+  <div id="characterSettings" class="character-settings"></div>
+  <div class="log-preview" id="logPreview">
+    <pre id="logContent"></pre>
+  </div>
+  <button id="downloadTxtButton" style="display:none;">下载处理后的日志 (TXT)</button>
+  <button id="downloadWordButton" style="display:none;">下载处理后的日志 (Word)</button>
+</div>
+<script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRPG Log着色器-Discord</title>
+    <link rel="stylesheet" href="styles_last.css">
+</head>
+<body>
+    <h1>TRPG Log着色器-HKTRPG Discord</h1>
+    
+    <div class="container">
+        <div class="left-side">
+            <label for="fileInput">Upload Log File / 上传日志文件:</label>
+            <input type="file" id="fileInput" accept=".txt" title="请选择一个日志文件" placeholder="请选择一个.txt文件">   
+
+            <div id="logOperations">
+                <h3>Log Operations / 日志操作</h3>
+                <div>
+                    <input type="checkbox" id="removeDate">
+                    <label for="removeDate">Remove Date / 删除日期</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="removeTime">
+                    <label for="removeTime">Remove Time / 删除时间</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="addBrackets">
+                    <label for="addBrackets">Add &lt;&gt; around names / 给名字添加&lt;&gt;</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="removeColon">
+                    <label for="removeColon">Remove Colon / 删除冒号</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="removeNewlines">
+                    <label for="removeNewlines">Remove Newlines / 删除换行符</label>
+                </div>
+                <h3>No function / 未完成</h3>
+                <div>
+                    <input type="checkbox" id="removeOOC">
+                    <label for="removeOOC">Remove OOC Entries / 删除戏外记录</label>
+                    <div id="oocSymbols">
+                        <input type="checkbox" id="symbolParentheses">
+                        <label for="symbolParentheses">(</label>
+                        <input type="checkbox" id="symbolStar">
+                        <label for="symbolStar">*</label>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" id="filterBotCommands">
+                    <label for="filterBotCommands">Filter Bot Commands / 过滤机器人指令</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="recognizeRoles">
+                    <label for="recognizeRoles">Recognize Roles and Change Color / 识别角色并改变颜色</label>
+                </div>        
+            </div>
+
+            <button id="processLogButton">Process Log / 处理日志</button>
+
+            <div class="output">
+                <div class="output-item">
+                    <input type="checkbox" id="preview">
+                    <label for="preview">Preview / 预览</label>
+                </div>
+
+                <div class="output-item">
+                    <input type="checkbox" id="removeNewlinesAddSymbols">
+                    <label for="removeNewlinesAddSymbols">RplGenStudio 回声工坊</label>
+                </div>
+
+                <button id="downloadTxtButton">Download TXT / 下载 TXT</button>
+
+            </div>
+        </div>
+
+        <div id="log-preview">
+            <pre id="logContent"contenteditable="true"></pre>
+        </div>    
+
+    </div>
+    
+    <!-- Area for managing role names and colors -->
+    <div id="roleSettings">
+        <h3>Role Settings / 角色设定</h3>
+        <div id="roleList"></div>
+    </div> 
+
+    <script src="script_last.js"></script>
+</body>
+</html>
