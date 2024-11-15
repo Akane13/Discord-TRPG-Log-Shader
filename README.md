@@ -1,5 +1,7 @@
 # Discord-TRPG Log Shader
  Basically for self-use
+
+https://akane13.github.io/Discord-TRPG-Log-Shader/
  
  Link to the English section: [English](#introduction).
 
