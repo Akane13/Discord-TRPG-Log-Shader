@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles_last.css">
 </head>
 <body>
+    <button id="tutorialButton" title="查看使用教程">?</button>
     <h1>TRPG Log着色器-HKTRPG Discord</h1>
     
     <div class="container">
@@ -88,5 +89,11 @@
     </div> 
 
     <script src="script_last.js"></script>
+    <script src="tutorial.js"></script>
+    <script>
+        document.getElementById("tutorialButton").addEventListener("click", () => {
+            window.open('tutorial.html', 'Tutorial', 'width=600,height=400,scrollbars=yes,resizable=yes');
+        });
+    </script>
 </body>
 </html>

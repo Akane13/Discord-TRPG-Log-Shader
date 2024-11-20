@@ -23,13 +23,14 @@ input[type="file"], button, input[type="checkbox"] + label {
 }
 
 #log-preview {
-    width: 80%;
+    width: 100%; /* 默认宽度调整为100% */
     margin-top: 20px;
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
     flex: 1;
     max-height: 500px;
+    overflow-y: auto; /* 增加滚动以适应高度限制 */
 }
 
 #logContent {
@@ -39,8 +40,43 @@ input[type="file"], button, input[type="checkbox"] + label {
     padding: 10px;
     border-radius: 8px;
     max-height: 450px;
-    overflow-y: auto;
+    overflow-y: auto; /* 确保内容可以滚动 */
 }
+
+/* 添加媒体查询以实现响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 改为垂直布局 */
+        height: auto; /* 自动调整高度 */
+    }
+
+    .left-side, .right-side {
+        flex: 1; /* 各占据一部分空间 */
+        width: 100%; /* 调整为100%宽度 */
+    }
+
+    #log-preview {
+        max-height: none; /* 移除高度限制 */
+        margin-bottom: 20px; /* 增加底部间距 */
+    }
+}
+
+/* 针对更小屏幕优化 */
+@media (max-width: 480px) {
+    button {
+        width: 100%; /* 按钮全宽 */
+    }
+
+    .role-item {
+        flex-direction: column; /* 调整为垂直布局 */
+        align-items: stretch; /* 调整子元素对齐方式 */
+    }
+
+    .role-item input[type="text"] {
+        margin-bottom: 8px; /* 增加垂直间距 */
+    }
+}
+
 
 .left-side {
     flex: 1; /* 左侧部分占据一半的空间 */
